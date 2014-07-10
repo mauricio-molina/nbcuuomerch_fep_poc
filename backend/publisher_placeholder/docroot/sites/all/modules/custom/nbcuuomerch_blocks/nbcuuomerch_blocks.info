@@ -15,6 +15,7 @@ features[fe_block_settings][] = block-block_header_welcome
 features[fe_block_settings][] = menu-menu-footer-main
 features[fe_block_settings][] = menu-menu-header-shopping-menu
 features[fe_block_settings][] = menu-menu-header-store-menu
+features[fe_block_settings][] = system-user-menu
 features[features_api][] = api:2
 features[menu_custom][] = menu-footer-main
 features[menu_custom][] = menu-header-shopping-menu

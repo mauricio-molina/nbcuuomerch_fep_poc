@@ -142,5 +142,31 @@ function nbcuuomerch_blocks_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['system-user-menu'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'user-menu',
+    'module' => 'system',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'stark' => array(
+        'region' => 'header',
+        'status' => 1,
+        'theme' => 'stark',
+        'weight' => -8,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
   return $export;
 }
