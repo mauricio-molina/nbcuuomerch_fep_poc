@@ -7,30 +7,58 @@ module.exports = function(grunt) {
         }
       }
     },
-/*
-    // This works but isn't appropiate here.
-    // Keeping as a reference for another gruntfile at a different part of the
-    // workflow. Will delete.
-    uglify: {
-      target: {
-        files: {
-          'styleguide/js/scripts.min.js': ['js/*.js']
+    jshint: {
+      all: {
+        src: 'js/*.js',
+        options: {
+          globals: {
+            jQuery: true,
+          }
         }
       }
     },
-*/
+    sync: {
+      css: {
+        files: [{
+          cwd: 'css',
+          src: [
+            '**', /* Include everything */
+          ],
+          dest: '../../backend/publisher_placeholder/docroot/sites/all/modules/custom/nbcuuomerch_blocks/css',
+        }],
+        verbose: true
+      },
+      js: {
+        files: [{
+          cwd: 'js',
+          src: [
+            '**', /* Include everything */
+          ],
+          dest: '../../backend/publisher_placeholder/docroot/sites/all/modules/custom/nbcuuomerch_blocks/js',
+        }],
+        verbose: true
+      }
+    },
+    uglify: {
+      target: {
+        files: {
+          '../../backend/publisher_placeholder/docroot/sites/all/modules/custom/nbcuuomerch_blocks/js/scripts.min.js': ['js/*.js']
+        }
+      }
+    },
     watch: {
-      sass: {
-        files: ['sass/*/*.scss', 'sass/*.scss'],
+      compass: {
+        files: ['sass/**/*.scss'],
         tasks: ['compass:target']
       },
-/*
-      // Same as above.
-      scripts: {
+      css: {
+        files: ['css/*.css'],
+        tasks: ['sync:css']
+      },
+      js: {
         files: ['js/*.js'],
-        tasks: ['uglify:target']
+        tasks: ['jshint:all', 'sync:js', 'uglify:target']
       }
-*/
     },
     shell: {
       patternlab: {
@@ -39,7 +67,7 @@ module.exports = function(grunt) {
     },
     concurrent: {
       target: {
-        tasks: ['watch:sass', 'shell:patternlab'],
+        tasks: ['watch:compass', 'watch:css', 'watch:js', 'shell:patternlab'],
         options: {
           logConcurrentOutput: true
         }
@@ -49,12 +77,11 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-contrib-compass');
-/*
-  // Same as above.
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-*/
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-sync');
 
   grunt.registerTask('default', ['concurrent:target']);
 }
