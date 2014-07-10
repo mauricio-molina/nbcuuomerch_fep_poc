@@ -150,6 +150,46 @@ function nbcuuomerch_blocks_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 1,
   );
+  // Exported menu link: menu-user-menu-anonymous_my-account:user
+  $menu_links['menu-user-menu-anonymous_my-account:user'] = array(
+    'menu_name' => 'menu-user-menu-anonymous',
+    'link_path' => 'user',
+    'router_path' => 'user',
+    'link_title' => 'My Account',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-user-menu-anonymous_my-account:user',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-user-menu-anonymous_sign-up:https://www.universalorlando.com/Customer-Profile/emailsignup.aspx
+  $menu_links['menu-user-menu-anonymous_sign-up:https://www.universalorlando.com/Customer-Profile/emailsignup.aspx'] = array(
+    'menu_name' => 'menu-user-menu-anonymous',
+    'link_path' => 'https://www.universalorlando.com/Customer-Profile/emailsignup.aspx',
+    'router_path' => '',
+    'link_title' => 'Sign Up',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-user-menu-anonymous_sign-up:https://www.universalorlando.com/Customer-Profile/emailsignup.aspx',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+  );
   // Exported menu link: user-menu_log-out:user/logout
   $menu_links['user-menu_log-out:user/logout'] = array(
     'menu_name' => 'user-menu',
@@ -192,7 +232,9 @@ function nbcuuomerch_blocks_menu_default_menu_links() {
   t('Cart (empty)');
   t('Checkout');
   t('Log out');
+  t('My Account');
   t('Privacy Policy - Revised');
+  t('Sign Up');
   t('Terms of Use');
   t('User account');
   t('© 2014 Universal Studios. All rights reserved. Copyright and trademark notices of specific items on this site');

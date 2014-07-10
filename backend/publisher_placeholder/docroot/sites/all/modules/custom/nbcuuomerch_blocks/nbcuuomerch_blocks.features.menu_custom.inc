@@ -28,6 +28,12 @@ function nbcuuomerch_blocks_menu_default_menu_custom() {
     'title' => 'Header store menu',
     'description' => '',
   );
+  // Exported menu: menu-user-menu-anonymous.
+  $menus['menu-user-menu-anonymous'] = array(
+    'menu_name' => 'menu-user-menu-anonymous',
+    'title' => 'User menu anonymous',
+    'description' => '',
+  );
   // Exported menu: user-menu.
   $menus['user-menu'] = array(
     'menu_name' => 'user-menu',
@@ -41,6 +47,7 @@ function nbcuuomerch_blocks_menu_default_menu_custom() {
   t('Header store menu');
   t('The <em>User</em> menu contains links related to the user\'s account, as well as the \'Log out\' link.');
   t('User menu');
+  t('User menu anonymous');
 
 
   return $menus;
