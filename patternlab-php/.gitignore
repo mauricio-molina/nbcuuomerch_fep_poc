@@ -1,0 +1,7 @@
+.DS_Store
+public/*
+!public/README
+config.ini
+latest-change.txt
+*-ck.js
+*.sass-cache/

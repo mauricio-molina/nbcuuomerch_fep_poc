@@ -1,0 +1,112 @@
+.header {
+	padding: 0;
+	//@extend .lc;
+	width: em(1001px);
+	margin: 0 auto;
+	//font-weight: normal;
+
+	// set up grid for placement
+
+	.header-nav {
+		width: em(416px);
+		text-transform: uppercase;
+		float: left;
+		line-height: 1;
+		border: 0;
+		border-top: $blue-light;
+		@include background-image(linear-gradient(#2189c6 0%,#1e7eb8 15%,#196ca1 33%,#14517e 56%,#0e355a 81%,#0c2748 100%));
+ 		padding: .65em;
+		text-align: left;
+		border-radius: 4px;
+		margin-top: 47px;
+		height: 28px;
+		.sign-up {
+			float: right;
+			font-weight: normal;
+			text-transform: none;
+			color: $blue-sky;
+		}
+		a {
+			color: $white;
+		}
+		span {
+			font-size: 11px;
+		}
+		li {
+			color: $white;
+			display: inline-block;
+			padding-left: 8em;
+			&:first-child {
+				padding-left: 1em;
+			}
+		}
+	}
+
+	span.header-nav {
+		font-weight: bold;	
+	}
+
+	ul.header-nav {
+		width: 100%;
+	}
+
+	@include breakpoint($bp-large) {
+  	@include layout($grid-5, $grid-3-gutter) {
+      .nav-tickets {
+        @include grid-span(2, 1, $options: 'both');
+      }
+      #logo {
+        @include grid-span(1, 3);
+        img {
+        	margin-left: 2.5em;
+        }
+      }
+      .nav-my-account {
+      	@include grid-span(2, 4);
+      }
+    }
+	}
+}
+
+#logo {
+	float: left;
+}
+
+.logo {
+	float: left;
+	max-width: 8rem;
+	margin: 0.4rem;
+
+	@media all and (min-width: $bp-med) {
+		max-width: 9rem;
+	}
+}
+
+.nav-toggle {
+	float: right;
+	display: block;
+	padding: 0.9rem 1rem 0.7rem;
+	font-size: 1.3rem;
+	line-height: 1;
+	border-left: 1px solid #dbdbdb;
+
+	@media all and (min-width: $bp-med) {
+		display: none;
+	}
+
+	@media all and (max-width: 17em) {
+		padding-left: 0.2rem;
+		padding-right: 0.2rem;
+	}
+}
+
+.search-form {
+	overflow: hidden;
+	max-height: 0;
+
+	@media all and (min-width: $bp-med) {
+		float: right;
+		max-height: none;
+		margin: 0.65em 0.5em 0 0;
+	}
+}
