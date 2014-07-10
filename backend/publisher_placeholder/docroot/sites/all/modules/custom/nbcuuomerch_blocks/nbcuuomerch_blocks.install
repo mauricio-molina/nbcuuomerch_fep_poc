@@ -1,0 +1,9 @@
+<?php
+/**
+ * Implements hook_install().
+ * Set default theme to Stark
+ */
+function nbcuuomerch_blocks_install() {
+  global $custom_theme;
+  $custom_theme = 'stark';
+}
