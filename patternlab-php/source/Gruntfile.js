@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     },
     jshint: {
       all: {
-        src: 'js/*.js',
+        src: 'js/fep.js',
         options: {
           globals: {
             jQuery: true,
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
     uglify: {
       target: {
         files: {
-          '../../backend/publisher_placeholder/docroot/sites/all/modules/custom/nbcuuomerch_blocks/js/scripts.min.js': ['js/*.js']
+          '../../backend/publisher_placeholder/docroot/sites/all/modules/custom/nbcuuomerch_blocks/js/scripts.min.js': ['js/fep.js']
         }
       }
     },
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
         tasks: ['sync:css']
       },
       js: {
-        files: ['js/*.js'],
+        files: ['js/fep.js'],
         tasks: ['jshint:all', 'sync:js', 'uglify:target']
       }
     },
