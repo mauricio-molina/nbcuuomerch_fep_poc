@@ -51,6 +51,12 @@ if (!empty($_GET['url'])) :
   <input name="import-form" type="submit" value="Submit" />
 </form>
 <p>Otherwise, correct the URL and submit again.</p>
+<?php
+
+endif;
+
+
+?>
 <button id="help-button" onclick="toggleHelp();">Help</button>
 <div id="help-text" style="border: 1px solid black;display: none;margin-top: 20px;padding: 0 20px;width: 999px">
   <p style="line-height: 1.8em;">Use this tool to scrape and import the HTML outputted by the backend of your webapp. Your webapp should be installed into the backend directory of Frontend Prototyper. From there, your webapp should be served by your web server. Enter the URL of the backend page you wish to prototype and submit. If the output looks correct, enter a filename and submit. This scraper will save the HTML to a Mustache template of that name in Pattern Lab. Be sure your template directory is writable by your web server! To access that template in Pattern Lab, navigate to that filename in the Pages menu of the toolbar.</p>
@@ -68,8 +74,3 @@ function toggleHelp() {
   }
 }
 </script>
-<?php
-
-
-endif;
-?>
