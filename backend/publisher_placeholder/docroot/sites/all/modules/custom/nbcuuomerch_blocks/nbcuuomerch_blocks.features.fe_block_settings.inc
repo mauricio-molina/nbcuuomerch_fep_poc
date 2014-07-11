@@ -86,7 +86,7 @@ function nbcuuomerch_blocks_default_fe_block_settings() {
         'weight' => -12,
       ),
     ),
-    'title' => '',
+    'title' => '<none>',
     'visibility' => 0,
   );
 
