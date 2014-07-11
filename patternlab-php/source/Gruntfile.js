@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     compass: {
       target: {
         options: {
-          config: 'config.rb'
+          config: 'config.rb',
         }
       }
     },
@@ -19,57 +19,53 @@ module.exports = function(grunt) {
     },
     sync: {
       css: {
-        files: [{
+        files: {
           cwd: 'css',
-          src: [
-            '**', /* Include everything */
-          ],
+          src: '**', // Include everything
           dest: '../../backend/publisher_placeholder/docroot/sites/all/modules/custom/nbcuuomerch_blocks/css',
-        }],
-        verbose: true
+        },
+        verbose: true,
       },
       js: {
-        files: [{
+        files: {
           cwd: 'js',
-          src: [
-            '**', /* Include everything */
-          ],
+          src: 'fep.js',
           dest: '../../backend/publisher_placeholder/docroot/sites/all/modules/custom/nbcuuomerch_blocks/js',
-        }],
-        verbose: true
+        },
+        verbose: true,
       }
     },
     uglify: {
       target: {
         files: {
-          '../../backend/publisher_placeholder/docroot/sites/all/modules/custom/nbcuuomerch_blocks/js/scripts.min.js': ['js/fep.js']
+          '../../backend/publisher_placeholder/docroot/sites/all/modules/custom/nbcuuomerch_blocks/js/scripts.min.js': 'js/fep.js',
         }
       }
     },
     watch: {
       compass: {
-        files: ['sass/**/*.scss'],
-        tasks: ['compass:target']
+        files: 'sass/**/*.scss',
+        tasks: 'compass:target',
       },
       css: {
-        files: ['css/*.css'],
-        tasks: ['sync:css']
+        files: 'css/*.css',
+        tasks: 'sync:css',
       },
       js: {
-        files: ['js/fep.js'],
-        tasks: ['jshint:all', 'sync:js', 'uglify:target']
+        files: 'js/fep.js',
+        tasks: ['jshint:all', 'sync:js', 'uglify:target'],
       }
     },
     shell: {
       patternlab: {
-        command: "php ../core/builder.php -wr"
+        command: "php ../core/builder.php -wr",
       }
     },
     concurrent: {
       target: {
         tasks: ['watch:compass', 'watch:css', 'watch:js', 'shell:patternlab'],
         options: {
-          logConcurrentOutput: true
+          logConcurrentOutput: true,
         }
       }
     }
@@ -83,5 +79,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-sync');
 
-  grunt.registerTask('default', ['concurrent:target']);
+  grunt.registerTask('default', 'concurrent:target');
 }
