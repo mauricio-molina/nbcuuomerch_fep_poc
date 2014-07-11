@@ -1,11 +1,6 @@
 .header {
 	padding: 0;
-	//@extend .lc;
-	width: em(1001px);
-	margin: 0 auto;
-	//font-weight: normal;
-
-	// set up grid for placement
+	font-size: 11px;
 
 	.header-nav {
 		width: em(416px);
@@ -14,7 +9,7 @@
 		line-height: 1;
 		border: 0;
 		border-top: $blue-light;
-		@include background-image(linear-gradient(#2189c6 0%,#1e7eb8 15%,#196ca1 33%,#14517e 56%,#0e355a 81%,#0c2748 100%));
+		@include background-image(linear-gradient($header-nav-bg));
  		padding: .65em;
 		text-align: left;
 		border-radius: 4px;

@@ -67,7 +67,7 @@ input[type="search"]::-webkit-search-decoration {
 	}
 	
 	input[type=submit], button, .btn {
-		font-size: $font-size-small-2;
+		font-size: $font-size-small;
 		padding: 0.65rem 1.3rem;
 		background: $gray-dark;
 		position: absolute;
@@ -83,29 +83,5 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 
-/* Validation */
-.has-error {
-	border-color: $error;
-}
-.is-valid {
-	border-color: $valid;
-}
 
 
-
-
-/*------------------------------------*\
-    $SPECIFIC FORMS
-\*------------------------------------*/
-
-/* Search Form */
-.search-field {
-	padding-right: 3em;
-}
-.inline-form .search-submit {
-	background: none;
-	padding: 0.78em 1em;
-	border: 0;
-	border-left: 1px solid $gray;
-	color: $gray;
-}

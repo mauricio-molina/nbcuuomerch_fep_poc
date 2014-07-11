@@ -4,21 +4,19 @@
 .footer {
 	clear: both;
 	overflow: hidden;
-	background: $gray-dark-2;
 	color: $white;
 	line-height: 1.2;
 
 	a {
-		color: $gray-light;
+		color: $white;
 	}
 }
 
 //Footer Nav
 .nav-footer {
-	margin: (-$pad) (-$pad) $space;
 
 	li {
-		border-bottom: 1px solid $gray-dark;
+		border-bottom: 1px solid $charcoal;
 
 		@media all and (min-width: $bp-med) {
 			border: 0;

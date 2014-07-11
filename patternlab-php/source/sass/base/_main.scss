@@ -3,13 +3,13 @@ html {
 }
 
 body {
-  // page layout for styleguide body - where to put??
-  @include background-image(linear-gradient(#005d97 0%,#006dab 6%,#0076b6 11%,#007db7 26%,#0073ab 36%,#006095 43%,#005b8d 47%,#005683 49%,#005483 50%,#004a74 54%,#003f66 60%,#003d61 61%,#00385c 64%,#002444 71%,#002241 100%));
+  @include background-image(linear-gradient($main-bg));
   background-repeat: repeat-x;
   background-attachment: fixed;
   height: 100%;
   font-size: $base-font-size;
   font-family: $font;
-	-webkit-text-size-adjust: 100%;
-	color: $gray-dark;
+  color: $base-font-color;
+  width: em(1001px); // move to layout container
+  margin: 0 auto; // move to layout container
 }

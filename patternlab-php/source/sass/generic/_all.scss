@@ -1,6 +1,6 @@
 //////////////////////////////
 // calculate pixels
-@function px($value, $px: 12) {
+@function px($value, $px: 14) {
   @return (($value * $px) / 1em) * 1px;
 }
 //////////////////////////////
