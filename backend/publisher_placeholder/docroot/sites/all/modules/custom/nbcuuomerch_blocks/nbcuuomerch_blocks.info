@@ -32,5 +32,3 @@ features[menu_links][] = menu-header-shopping-menu_checkout:<front>
 features[menu_links][] = menu-header-store-menu_buy-tickets:<front>
 features[menu_links][] = menu-user-menu-anonymous_my-account:user
 features[menu_links][] = menu-user-menu-anonymous_sign-up:https://www.universalorlando.com/Customer-Profile/emailsignup.aspx
-features[menu_links][] = user-menu_log-out:user/logout
-features[menu_links][] = user-menu_user-account:user
