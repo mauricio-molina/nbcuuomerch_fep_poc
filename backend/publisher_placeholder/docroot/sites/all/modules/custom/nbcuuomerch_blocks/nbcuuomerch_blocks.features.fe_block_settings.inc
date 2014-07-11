@@ -178,7 +178,6 @@ function nbcuuomerch_blocks_default_fe_block_settings() {
     'node_types' => array(),
     'pages' => '',
     'roles' => array(
-      'administrator' => 3,
       'authenticated user' => 2,
     ),
     'themes' => array(
