@@ -1,13 +1,13 @@
 <?php
 $html = '';
-$target_node_id = 'main-wrapper'; // This is what we want in Drupal. Can be changed if the backend gets switched.
+$target_element_id = 'main-wrapper'; // This is the element we want to scrape from Drupal
 $template_dir = '../../../patternlab-php/source/_patterns/04-pages';
-$url = empty($_GET['url']) ? $url = '' : $_GET['url'];
 
 
 if (!empty($_POST['filename'])) {
   if (!empty($_POST['html'])) {
-    $filename = preg_replace('/[^\w.-]/', '', $_POST['filename']);
+    $filename = preg_replace('/[^\w.-]/', '', $_POST['filename']);  // Limit filenames to sane characters
+    $filename = preg_replace('/^\.+/', '', $_POST['filename']);     // Don't allow periods at beginning of filenames
     $html = $_POST['html'];
   }
   if (empty($filename) || empty($html)) {
@@ -15,11 +15,13 @@ if (!empty($_POST['filename'])) {
   } else {
     file_put_contents($template_dir . '/' .  $filename . '.mustache', $html);
     echo '<p style="color: green;">Submission successful! Now check your template in Pattern Lab by navigating to it in the Pages menu of the toolbar.</p>';
+    unset($_GET['url']);
   }
 }
 elseif (!empty($_POST['html'])) {
   echo '<p style="color: red;">Please enter a filename!</p>';
 }
+$url = empty($_GET['url']) ? $url = '' : $_GET['url'];
 
 
 ?>
@@ -36,7 +38,7 @@ if (!empty($_GET['url'])) :
 
   $doc = new DOMDocument();
   $doc->loadHTMLFile($url);
-  $context = $doc->getElementById($target_node_id);
+  $context = $doc->getElementById($target_element_id);
   $html = $doc->saveHTML($context);
   echo '<div style="border: 1px solid black;padding: 20px;width: 999px;">' . $html . '</div>';
 
