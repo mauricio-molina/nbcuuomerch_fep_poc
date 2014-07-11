@@ -19,19 +19,19 @@ module.exports = function(grunt) {
     },
     sync: {
       css: {
-        files: {
+        files: [{
           cwd: 'css',
-          src: '**', // Include everything
+          src: '*.css',
           dest: '../../backend/publisher_placeholder/docroot/sites/all/modules/custom/nbcuuomerch_blocks/css',
-        },
+        }],
         verbose: true,
       },
       js: {
-        files: {
+        files: [{
           cwd: 'js',
           src: 'fep.js',
           dest: '../../backend/publisher_placeholder/docroot/sites/all/modules/custom/nbcuuomerch_blocks/js',
-        },
+        }],
         verbose: true,
       }
     },
