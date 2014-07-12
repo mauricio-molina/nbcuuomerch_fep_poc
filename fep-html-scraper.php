@@ -8,6 +8,7 @@ if (!empty($_POST['filename'])) {
   if (!empty($_POST['html'])) {
     $filename = preg_replace('/[^\w.-]/', '', $_POST['filename']);  // Limit filenames to sane characters
     $filename = preg_replace('/^\.+/', '', $_POST['filename']);     // Don't allow periods at beginning of filenames
+    $filename = preg_replace('/^-+/', '', $_POST['filename']);      // Don't allow hyphens at beginning of filenames
     $html = $_POST['html'];
   }
   if (empty($filename) || empty($html)) {
