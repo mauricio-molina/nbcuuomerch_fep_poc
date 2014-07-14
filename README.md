@@ -5,7 +5,7 @@ For documentation on installing the dependencies (Bundler and Node), consult eit
 * https://github.com/e2tha-e/frontend-prototyper-poc/blob/master/README.md
 * https://github.com/NBCUOTS/Publisher7_nbcuuomerch/wiki/Frontend-Prototyper
 
-Or just install Bundler with Gem and Node with your preferred OS-specific package manager (Aptitude, Homebrew, etc.) Then, just...
+Or just install Bundler with Gem, Node with your preferred OS-specific package manager (Aptitude, Homebrew, etc.), and Grunt with NPM. Then, just...
 ###Launch Grunt with Bundler
 ```bash
 $ bundle exec grunt
