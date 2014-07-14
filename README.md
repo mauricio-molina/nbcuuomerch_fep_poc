@@ -8,7 +8,7 @@ For documentation on installing the dependencies (Bundler and Node), consult eit
 Or just install Bundler with Gem, Node with your preferred OS-specific package manager (Aptitude, Homebrew, etc.), and Grunt with NPM. Then, just...
 ###Launch Grunt with Bundler
 ```bash
-$ cd patternlab-php/source
+$ cd nbcuuomerch_fep_poc/patternlab-php/source
 $ bundle exec grunt
 ```
 ###Launch Pattern Lab in browser
