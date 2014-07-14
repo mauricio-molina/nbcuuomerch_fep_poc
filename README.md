@@ -8,14 +8,14 @@ For documentation on installing the dependencies (Bundler and Node), consult eit
 Or just install Bundler with Gem, Node with your preferred OS-specific package manager (Aptitude, Homebrew, etc.), and Grunt with NPM. Then, just...
 ###Launch Grunt with Bundler
 ```bash
-$ cd nbcuuomerch_fep_poc/patternlab-php/source
+$ cd patternlab-php/source
 $ bundle exec grunt
 ```
 ###Launch Pattern Lab in browser
-* In a file browser, navigate to frontend-prototyper-poc/patternlab-php/public
+* In a file browser, navigate to patternlab-php/public
 * Double-click index.html
 
-Grunt should be running the watching and auto-reloading tasks. Changes to the code should be immediately viewable in the browser on save. Make all your changes in frontend-prototyper-poc/patternlab-php/source. **DO NOT HACK CORE!**
+Grunt should be running the watching and auto-reloading tasks. Changes to the code should be immediately viewable in the browser on save. Make all your changes in patternlab-php/source. **DO NOT HACK CORE!**
 ###Inflate Drupal instance
 There is a vanilla Drupal instance in backend/publisher_placeholder/docroot. Inflate this the normal way, and point a local URL to the docroot.
 ###FEP HTML Scraper
