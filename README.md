@@ -15,7 +15,7 @@ $ bundle exec grunt
 * In a file browser, navigate to frontend-prototyper-poc/patternlab-php/public
 * Double-click index.html
 
-Grunt should be running the watching and auto-reloading tasks. Changes to the code should be immediately viewable in the browser on save.
+Grunt should be running the watching and auto-reloading tasks. Changes to the code should be immediately viewable in the browser on save. Make all your changes in frontend-prototyper-poc/patternlab-php/source. **DO NOT HACK CORE!**
 ###Inflate Drupal instance
 There is a vanilla Drupal instance in backend/publisher_placeholder/docroot. Inflate this the normal way, and point a local URL to the docroot.
 ###FEP HTML Scraper
